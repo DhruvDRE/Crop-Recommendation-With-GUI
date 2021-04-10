@@ -1,0 +1,9 @@
+(0, 0, 0, 0, 0, 0, 0)
+(32, 3, 4, 5, 6, 79, 9)
+[nitval.get(),phoval.get(),potval.get(),tempval.get(),humval.get(),phvalval.get(),rainval.get()]
+[nitval.get(),phoval.get(),potval.get(),tempval.get(),humval.get(),phvalval.get(),rainval.get()]
+(74, 35, 40, 26, 80, 6, 242, array(['rice'], dtype=object))
+(74, 35, 40, 26, 80, 6, 242, 'rice')
+(74, 35, 40, 26, 80, 6, 242, 'rice')
+(74, 35, 40, 26, 80, 7, 243, 'rice')
+(74, 35, 40, 26, 80, 7, 243, 'rice')
