@@ -95,16 +95,20 @@ model.predict([[74,35,40,26.491096,80.158363,6.980401,242.864034]])
 
 
 from tkinter import *
+#import tkSimpleDialog
+from tkinter import messagebox
 root=Tk()
-
 def getvals():
     print("Submiting form")
-    print(f"{nitval.get(),phoval.get(),potval.get(),tempval.get(),humval.get(),phvalval.get(),rainval.get()}")
+    
     s=model.predict([[nitval.get(),phoval.get(),potval.get(),tempval.get(),humval.get(),phvalval.get(),rainval.get()]])
-    code_output.insert(0.0,s)
+    print(f"{nitval.get(),phoval.get(),potval.get(),tempval.get(),humval.get(),phvalval.get(),rainval.get(),s[0]}")
+    messagebox.showinfo("Crop Recommended",s[0])
     with open("records.txt","a") as f:
         f.write(f"{nitval.get(),phoval.get(),potval.get(),tempval.get(),humval.get(),phvalval.get(),rainval.get(),s[0]}\n")
     # instead of always rewrite using w use command a that will add values to same file also try to use \n to get values in next line
+
+
 root.geometry("644x344")
 root.title("CROP RECOMMENDATION BY DHURV")
 #heading
@@ -172,12 +176,8 @@ stateentry.grid(row=9,column=3)
 #button &packing it and assigning its a command
 Button(text="Submit To Crop Rec",command=getvals).grid(row=10,column=3)
 
-code_output=Text(root,height=3,width=4,wrap=WORD).grid(row=11,column=3)
-
 root.mainloop()
 
-
-# In[ ]:
 
 
 
